@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\PulseraController;
+use App\Http\Controllers\OrdenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,10 @@ Route::get('pulseras/{pulsera}', [PulseraController::class, 'show']);
 Route::post('pulseras', [PulseraController::class, 'store']);
 Route::put('pulseras/{pulsera}', [PulseraController::class, 'update']);
 Route::delete('pulseras/{pulsera}', [PulseraController::class, 'delete']);
+
+
+Route::get('ordenes', [OrdenController::class, 'index']);
+Route::get('ordenes/{orden}', [OrdenController::class, 'show']);
+Route::post('ordenes', [OrdenController::class, 'store']);
+Route::put('ordenes/{orden}', [OrdenController::class, 'update']);
+Route::delete('ordenes/{orden}', [OrdenController::class, 'delete']);
