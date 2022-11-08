@@ -16,8 +16,8 @@ class CreatePulseasTable extends Migration
         Schema::create('pulseras', function (Blueprint $table) {
             $table->id();
             $table->string('id_pulsera');
-            $table->string('total');
-            $table->float('pagado', 8, 2);
+            $table->float('total', 8, 2);
+            $table->boolean('pagado');
             $table->string('id_usuario');
             $table->timestamps();
         });
