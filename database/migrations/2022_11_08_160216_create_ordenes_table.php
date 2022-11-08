@@ -13,7 +13,7 @@ class CreateOrdenesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ordenes', function (Blueprint $table) {
+        Schema::create('ordens', function (Blueprint $table) {
             $table->id();
             $table->string('id_purlcera');
             $table->string('id_producto');
