@@ -14,7 +14,8 @@ class CreatePulseasTable extends Migration
     public function up()
     {
         Schema::create('pulseras', function (Blueprint $table) {
-            $table->string('id');
+            $table->id();
+            $table->string('id_pulsera');
             $table->string('total');
             $table->float('pagado', 8, 2);
             $table->string('id_usuario');
