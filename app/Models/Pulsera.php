@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pulsera extends Model
 {
-    protected $fillable=['total','pagado','id_usuario'];
+    protected $fillable=['id_pulsera','total','pagado','id_usuario'];
     use HasFactory;
 }
