@@ -12,8 +12,11 @@ class OrdenController extends Controller
         return Orden::all();
     }
 
-    public function show(Orden $orden)
+    public function show($id)
     {
+        $orden = DB::table('pulseras')
+                ->where('id_pulsera', '=', $id)
+                ->get();
         return $orden;
     }
 
