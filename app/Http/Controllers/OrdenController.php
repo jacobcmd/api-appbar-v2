@@ -15,7 +15,7 @@ class OrdenController extends Controller
 
     public function show($id)
     {
-        $orden = DB::table('pulseras')
+        $orden = DB::table('ordens')
                 ->where('id_pulsera', '=', $id)
                 ->get();
         return $orden;
