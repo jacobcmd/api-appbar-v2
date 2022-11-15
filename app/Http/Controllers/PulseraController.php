@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pulsera;
+use Illuminate\Support\Facades\DB;
 
 
 class PulseraController extends Controller
