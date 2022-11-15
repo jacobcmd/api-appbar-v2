@@ -13,8 +13,11 @@ class PulseraController extends Controller
         return Pulsera::all();
     }
 
-    public function show(Pulsera $pulsera)
+    public function show($id)
     {
+        $pulsera = DB::table('pulseras')
+                ->where('id_pulsera', '=', $id)
+                ->get();
         return $pulsera;
     }
 
