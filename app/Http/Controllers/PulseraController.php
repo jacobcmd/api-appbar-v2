@@ -29,13 +29,11 @@ class PulseraController extends Controller
         return response()->json($pulsera, 201);
     }
 
-    public function update($id)
+    public function update(Request $request, Pulsera $pulsera)
     {
-        $affected = DB::table('pulseras')
-              ->where('id_pulsera', $id)
-              ->update(['pagado' => 1]);
+        $pulsera->update($request->all());
 
-        return response()->json($affected, 200);
+        return response()->json($pulsera, 200);
     }
 
     public function delete(Pulsera $pulsera)
