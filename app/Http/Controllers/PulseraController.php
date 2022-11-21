@@ -29,9 +29,9 @@ class PulseraController extends Controller
         return response()->json($pulsera, 201);
     }
 
-    public function update(Request $request, Pulsera $pulsera)
+    public function update(Request $request, $id)
     {
-        $pulsera->update($request->all());
+        $pulsera = DB::table('pulseras')->where('id_pulsera', $id)->update(array('pagado'=>'1'));
 
         return response()->json($pulsera, 200);
     }
