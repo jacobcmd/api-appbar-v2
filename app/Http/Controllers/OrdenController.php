@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\Orden;
+use Illuminate\Support\Facades\DB;
+
 
 class OrdenController extends Controller
 {
