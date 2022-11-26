@@ -37,11 +37,9 @@ class OrdenController extends Controller
         return response()->json($orden, 200);
     }
 
-    public function delete(Orden $orden)
+    public function delete($id)
     {
-        $orden->delete();
-
-        return response()->json(null, 204);
+        return DB::table('pulseras')->where('id', $id)->delete();
     }
 
 }
