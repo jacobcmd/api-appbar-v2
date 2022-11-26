@@ -39,7 +39,7 @@ class OrdenController extends Controller
 
     public function delete($id)
     {
-        $orden = DB::table('pulseras')->where('id', $id)->delete();
+        $orden = DB::table('pulseras')->delete($id);
         return response()->json($orden, 200);
     }
 
